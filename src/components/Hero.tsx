@@ -24,24 +24,27 @@ const Hero = () => {
         <div className="animate-fade-in">
           <div className="mb-6">
             <span className="inline-block px-4 py-2 bg-purple-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium backdrop-blur-sm">
-              NEXT GENERATION OF SOFTWARE DEVELOPMENT
+              FULL-STACK SOFTWARE DEVELOPER
             </span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-            <span className="block">Code</span>
-            <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Smarter
-            </span>
-            <span className="block">with AI-Powered</span>
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Development
-            </span>
+            <span className="block">Tasnim Amiri</span>
           </h1>
           
-          <p className="text-lg text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Tasnim combines cutting-edge artificial intelligence with innovative development 
-            strategies to help you build exceptional software solutions with precision and ease.
+          <h2 className="text-2xl md:text-4xl font-semibold mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Crafting Digital Experiences &
+            </span>
+            <br />
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Engineering Innovative Software Solutions
+            </span>
+          </h2>
+          
+          <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+            Full-stack developer passionate about building comprehensive, user-centric applications 
+            with cutting-edge technologies and modern best practices.
           </p>
           
           {/* CTA Buttons */}
@@ -59,7 +62,7 @@ const Hero = () => {
               className="border-2 border-cyan-400/50 text-cyan-300 hover:bg-cyan-400/20 hover:text-cyan-200 px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Learn How It Works
+              Get In Touch
             </Button>
           </div>
           
