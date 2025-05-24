@@ -15,7 +15,7 @@ const Projects = () => {
         "Real-time inventory management with automated restock notifications",
         "Advanced analytics dashboard with comprehensive sales insights"
       ],
-      mockupType: "laptop"
+      mockupImage: "/lovable-uploads/26957ee8-1935-4d63-a4f2-7e513789106f.png"
     },
     {
       title: "Project QuantumLeap - Scalable SaaS Dashboard",
@@ -28,7 +28,7 @@ const Projects = () => {
         "Customizable dashboard builder with drag-and-drop interface",
         "Advanced team collaboration with role-based access control"
       ],
-      mockupType: "desktop"
+      mockupImage: "/lovable-uploads/2c817710-ea44-420b-98bd-31edc3115b62.png"
     },
     {
       title: "Project Iris - Interactive Mobile Wellness App",
@@ -41,18 +41,9 @@ const Projects = () => {
         "Integration with popular fitness wearables and health platforms",
         "Personalized coaching system with ML-driven recommendations"
       ],
-      mockupType: "mobile"
+      mockupImage: "/lovable-uploads/a5bb0f02-3ed4-489d-a165-420fea9baf6a.png"
     }
   ];
-
-  const getMockupGradient = (type: string) => {
-    switch (type) {
-      case 'laptop': return 'from-blue-500 to-purple-600';
-      case 'desktop': return 'from-purple-500 to-pink-600';
-      case 'mobile': return 'from-teal-500 to-blue-600';
-      default: return 'from-gray-500 to-gray-600';
-    }
-  };
 
   return (
     <section id="projects" className="py-20 bg-slate-900">
@@ -75,16 +66,13 @@ const Projects = () => {
               {/* Project Mockup */}
               <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''} relative group`}>
                 <div className="relative bg-slate-800 rounded-2xl p-8 border border-slate-700 hover:border-blue-500/50 transition-all duration-500 transform group-hover:scale-105">
-                  <div className={`aspect-video bg-gradient-to-br ${getMockupGradient(project.mockupType)} rounded-lg flex items-center justify-center relative overflow-hidden`}>
-                    <div className="absolute inset-0 bg-black/20"></div>
-                    <div className="text-center z-10">
-                      <div className="text-6xl mb-4">
-                        {project.mockupType === 'laptop' && '💻'}
-                        {project.mockupType === 'desktop' && '🖥️'}
-                        {project.mockupType === 'mobile' && '📱'}
-                      </div>
-                      <p className="text-white/80 text-sm">High-Quality Mockup Placeholder</p>
-                    </div>
+                  <div className="aspect-video rounded-lg overflow-hidden relative">
+                    <img 
+                      src={project.mockupImage} 
+                      alt={`${project.title} mockup`}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                   </div>
                   
                   {/* Floating Tech Stack */}
