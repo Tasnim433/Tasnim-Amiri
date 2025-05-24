@@ -1,67 +1,101 @@
 
+import { Code, Lightbulb, Users, Zap } from 'lucide-react';
+
 const About = () => {
   const values = [
-    { title: "Innovation", description: "Embracing cutting-edge technologies and creative solutions" },
-    { title: "Quality", description: "Delivering clean, maintainable, and scalable code" },
-    { title: "User-Centricity", description: "Building experiences that delight and empower users" }
+    {
+      icon: <Code className="h-6 w-6" />,
+      title: "Clean Code",
+      description: "Writing maintainable, scalable, and efficient code that stands the test of time."
+    },
+    {
+      icon: <Lightbulb className="h-6 w-6" />,
+      title: "Innovation",
+      description: "Constantly exploring new technologies and methodologies to solve complex problems."
+    },
+    {
+      icon: <Users className="h-6 w-6" />,
+      title: "Collaboration",
+      description: "Building strong relationships with teams and stakeholders to deliver exceptional results."
+    },
+    {
+      icon: <Zap className="h-6 w-6" />,
+      title: "Performance",
+      description: "Optimizing every aspect of development for speed, efficiency, and user experience."
+    }
   ];
 
   return (
-    <section id="about" className="py-20 bg-slate-900 relative">
+    <section id="about" className="py-20 bg-slate-800/50">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Photo Placeholder */}
-          <div className="relative">
-            <div className="w-full max-w-md mx-auto">
-              <div className="aspect-square bg-gradient-to-br from-slate-700 to-slate-800 rounded-2xl border border-slate-600 flex items-center justify-center relative overflow-hidden group">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="text-center z-10">
-                  <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-white">TA</span>
-                  </div>
-                  <p className="text-gray-400 text-sm">Professional Photo Placeholder</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            About <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Tasnim</span>
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto mb-8 rounded-full"></div>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Content */}
           <div className="space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              About <span className="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">Me</span>
-            </h2>
-            
-            <div className="space-y-4 text-gray-300 leading-relaxed">
-              <p className="text-lg">
-                I'm a passionate software developer who thrives on transforming complex problems into elegant, 
-                user-friendly solutions. With expertise spanning the entire development stack, I bring ideas to 
-                life through clean code, intuitive design, and robust architecture.
+            <div className="glass rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-white mb-4">Passionate Full-Stack Developer</h3>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                I'm a dedicated software developer with a deep passion for creating digital experiences 
+                that make a difference. From intuitive user interfaces to robust backend systems, 
+                I thrive on building comprehensive and impactful solutions that push the boundaries 
+                of what's possible.
               </p>
-              
-              <p>
-                From crafting responsive user interfaces that engage and delight, to building scalable backend 
-                systems that power modern applications, I believe in the power of technology to create meaningful 
-                impact. My approach combines technical excellence with a deep understanding of user needs and 
-                business objectives.
+              <p className="text-gray-300 leading-relaxed mb-4">
+                My journey in software development is driven by continuous learning and a commitment 
+                to best practices. I believe in writing clean, testable code and designing scalable 
+                architectures that can grow with business needs.
               </p>
-              
-              <p>
-                I'm committed to continuous learning, staying current with emerging technologies, and applying 
-                best practices in clean code, testing, and scalability. Whether working independently or as part 
-                of a collaborative team, I bring strong communication skills and a solutions-oriented mindset to 
-                every project.
+              <p className="text-gray-300 leading-relaxed">
+                With a user-centric approach to development, I focus on creating solutions that not 
+                only meet technical requirements but also deliver exceptional user experiences. 
+                I excel in collaborative environments and enjoy communicating complex technical 
+                concepts to diverse stakeholders.
               </p>
             </div>
-            
-            {/* Values */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-              {values.map((value, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-4 hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105">
-                  <h3 className="text-blue-400 font-semibold mb-2">{value.title}</h3>
-                  <p className="text-gray-400 text-sm">{value.description}</p>
+          </div>
+
+          {/* Values Grid */}
+          <div className="grid grid-cols-2 gap-4">
+            {values.map((value, index) => (
+              <div 
+                key={index}
+                className="glass rounded-xl p-6 hover:bg-white/10 transition-all duration-300 transform hover:scale-105"
+              >
+                <div className="text-purple-400 mb-3">
+                  {value.icon}
                 </div>
-              ))}
+                <h4 className="text-lg font-semibold text-white mb-2">{value.title}</h4>
+                <p className="text-gray-400 text-sm leading-relaxed">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Stats or Additional Info */}
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="glass rounded-xl p-6 text-center">
+            <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+              50+
             </div>
+            <p className="text-gray-300">Projects Completed</p>
+          </div>
+          <div className="glass rounded-xl p-6 text-center">
+            <div className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2">
+              3+
+            </div>
+            <p className="text-gray-300">Years Experience</p>
+          </div>
+          <div className="glass rounded-xl p-6 text-center">
+            <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
+              100%
+            </div>
+            <p className="text-gray-300">Client Satisfaction</p>
           </div>
         </div>
       </div>

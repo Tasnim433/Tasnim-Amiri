@@ -4,37 +4,51 @@ import { Button } from '@/components/ui/button';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
-        <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse delay-1000"></div>
-        <div className="absolute bottom-1/4 left-1/2 w-96 h-96 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse delay-2000"></div>
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Spline 3D Background */}
+      <div className="absolute inset-0 z-0">
+        <iframe 
+          src='https://my.spline.design/worldplanet-i8Ibs9yVZ0bCjpGpBD5sA5OF/' 
+          frameBorder='0' 
+          width='100%' 
+          height='100%'
+          className="w-full h-full"
+        />
       </div>
       
+      {/* Dark overlay to ensure text readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-purple-900/70 to-slate-900/80 z-10"></div>
+      
       {/* Content */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
+      <div className="relative z-20 text-center max-w-4xl mx-auto px-6">
         <div className="animate-fade-in">
+          <div className="mb-6">
+            <span className="inline-block px-4 py-2 bg-purple-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium backdrop-blur-sm">
+              NEXT GENERATION OF SOFTWARE DEVELOPMENT
+            </span>
+          </div>
+          
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-teal-400 bg-clip-text text-transparent">
-              Tasnim Amiri
+            <span className="block">Code</span>
+            <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Smarter
+            </span>
+            <span className="block">with AI-Powered</span>
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Development
             </span>
           </h1>
-          <h2 className="text-2xl md:text-3xl text-gray-300 mb-8 font-light">
-            Crafting <span className="text-blue-400 font-medium">Digital Experiences</span> & 
-            <br className="hidden md:block" />
-            Engineering <span className="text-teal-400 font-medium">Innovative Software Solutions</span>
-          </h2>
-          <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Full-stack developer passionate about building comprehensive, user-centric applications 
-            with cutting-edge technologies and modern best practices.
+          
+          <p className="text-lg text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+            Tasnim combines cutting-edge artificial intelligence with innovative development 
+            strategies to help you build exceptional software solutions with precision and ease.
           </p>
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl backdrop-blur-sm"
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
               View My Work <ArrowRight className="ml-2 h-5 w-5" />
@@ -42,10 +56,10 @@ const Hero = () => {
             <Button 
               variant="outline" 
               size="lg"
-              className="border-2 border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-slate-900 px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105"
+              className="border-2 border-cyan-400/50 text-cyan-300 hover:bg-cyan-400/20 hover:text-cyan-200 px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Get In Touch
+              Learn How It Works
             </Button>
           </div>
           
@@ -78,9 +92,9 @@ const Hero = () => {
       </div>
       
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
+        <div className="w-6 h-10 border-2 border-purple-400/60 rounded-full flex justify-center backdrop-blur-sm">
+          <div className="w-1 h-3 bg-purple-400 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>
