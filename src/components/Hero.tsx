@@ -5,19 +5,19 @@ import { Button } from '@/components/ui/button';
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Spline 3D Background */}
+      {/* Animated Background Elements */}
       <div className="absolute inset-0 z-0">
-        <iframe 
-          src='https://my.spline.design/worldplanet-i8Ibs9yVZ0bCjpGpBD5sA5OF/' 
-          frameBorder='0' 
-          width='100%' 
-          height='100%'
-          className="w-full h-full"
-        />
+        {/* Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/30 to-slate-900"></div>
+        
+        {/* Floating Orbs */}
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+        
+        {/* Grid Pattern */}
+        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       </div>
-      
-      {/* Dark overlay to ensure text readability */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-purple-900/70 to-slate-900/80 z-10"></div>
       
       {/* Content */}
       <div className="relative z-20 text-center max-w-4xl mx-auto px-6">
